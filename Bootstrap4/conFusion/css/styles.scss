@@ -49,3 +49,17 @@ body{
     border-bottom: 1px solid $lt-gray;
     padding: 10px;
 }
+
+.modal-header {
+    background-color: $background-dark;
+    color:floralwhite;
+
+    .close {
+        color: floralwhite;
+    }
+}
+
+.modal-body {
+    background: $background-pale;
+}
+
