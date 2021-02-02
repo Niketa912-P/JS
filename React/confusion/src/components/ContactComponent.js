@@ -5,6 +5,7 @@ import { Control, Form, Errors, actions } from 'react-redux-form';
 import { Link } from 'react-router-dom';
 
 
+
 const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !(val) || (val.length <= len);
 const minLength = (len) => (val) => val && (val.length >= len);
@@ -36,7 +37,7 @@ class Contact extends Component {
 
     handleSubmit(values) {
         console.log('Current State is: ' + JSON.stringify(values));
-        alert('Current State is: ' + JSON.stringify(values));
+        this.props.postFeedback(this.props.Id, values.firstName, values.lastname, values.telnum, values.email, values.comment);
         this.props.resetFeedbackForm();
         // event.preventDefault();
     }
